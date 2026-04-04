@@ -1,0 +1,217 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body.work {
+  background: black;
+}
+#video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.roles {
+  position: fixed;   /* stick relative to viewport */
+  bottom: 20px;      /* distance from bottom of the page */
+  left: 20px;        /* distance from left edge */
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  z-index: 2;
+}
+
+.copyright {
+  position: fixed;   /* stick relative to viewport */
+  bottom: -26px;      /* distance from bottom of the page */
+  right: 172px;        /* distance from left edge */
+  color: white;
+  font-size: 21px;
+  font-weight: 200;
+  z-index: 2;
+  opacity: 0.3;
+}
+
+.copyright-text {
+  position: fixed;   /* stick relative to viewport */
+  bottom: -5px;      /* distance from bottom of the page */
+  right: 20px;        /* distance from left edge */
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+  z-index: 2;
+  opacity: 0.3;
+}
+
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;      /* make it span exactly the viewport */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: transparent;
+  box-sizing: border-box; /* important! include padding in width */
+  z-index: 1000;
+  font-size: 20px;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Links container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Links */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  transition: 0.3s;
+  margin: 20px;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+a:active {
+  color: white;
+}
+
+/* WORKS PAGE ------------------------------------------------------------------------------
+   /* Video background */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0; /* behind everything */
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container, crops if needed */
+  opacity: 0;                  /* start invisible */
+  transition: opacity 0.2s ease-in-out; /* fade in/out */
+  z-index: 0;
+}
+
+/* Content on top */
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 900px;
+  margin-left: auto;
+  margin-top: 200px;
+  padding: 0 20px;
+  font-size: 13px;
+  background: transparent;
+}
+
+/* Works list styling */
+.works-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.works-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background: transparent;
+}
+
+/* Scale text on hover */
+.works-list li span {
+  display: inline-block; /* needed for transform */
+  transition: transform 0.2s ease-in-out;
+}
+
+.works-list li:hover span {
+  transform: scale(1.05); /* slightly bigger text */
+}
+
+/* Numbers, title, year */
+/* Columns */
+.number {
+  width: 50px;             /* fixed width for number */
+  font-weight: bold;
+}
+
+.title {
+  flex: 2;                 /* takes more space */
+  text-align: left;
+  padding: 0 10px;
+}
+
+.role {
+  flex: 1;                 /* role column */
+  margin-right: 50px;
+}
+
+.year {
+  width: 60px;             /* fixed width for year */
+  text-align: right;
+}
