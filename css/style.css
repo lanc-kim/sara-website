@@ -9,6 +9,11 @@ html, body {
 body.work {
   background: black;
 }
+
+body.home {
+  background: black;
+}
+
 #video {
   position: fixed;
   top: 0;
