@@ -14,6 +14,14 @@ body.home {
   background: black;
 }
 
+body.photography {
+  background: black;
+}
+
+body.about {
+  background: black;
+}
+
 #video {
   position: fixed;
   top: 0;
@@ -241,8 +249,38 @@ a:active {
   text-align: right;
 }
 /* PHOTOGRAPHY PAGE ------------------------------------------------------------------------------*/
+.gallery {
+  width: min(1400px, 90%);
+  margin: 120px auto 60px auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+/* Individual Photo Card */
+.gallery figure {
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Images */
 .gallery img {
-  width: 50%;
-  height: auto;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
   display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gallery {
+    width: 95%;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery img {
+    height: 300px;
+  }
 }
