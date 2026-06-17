@@ -284,3 +284,89 @@ a:active {
     height: 300px;
   }
 }
+/* ABOUT PAGE ------------------------------------------------------------------------------*/
+body.about figure {
+  width: min(900px, 90%);
+  margin: 140px auto 40px auto; /* pushes below navbar */
+  overflow: hidden;
+}
+
+body.about figure img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+
+  border-radius: 12px;
+}
+
+/* ===== About Text ===== */
+
+body.about {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 140px 8% 80px 8%;
+}
+
+/* ===== Navbar stays full width ===== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* ===== Image (LEFT SIDE) ===== */
+
+body.about figure {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+body.about figure img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Text (RIGHT SIDE) ===== */
+
+p.about-text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: white;
+}
+
+/* ===== Responsive (stack on mobile) ===== */
+
+@media (max-width: 768px) {
+  body.about {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 120px;
+  }
+
+  body.about figure img {
+    height: 400px;
+  }
+}
